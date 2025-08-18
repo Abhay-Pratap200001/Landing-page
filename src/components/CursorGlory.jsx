@@ -41,7 +41,7 @@ export default function CursorGlow() {
 
       {/* Blurry Glow */}
       <div
-        className="w-40 h-40 bg-purple-400 rounded-full blur-3xl opacity-40 absolute"
+        className="w-40 h-40 bg-purple-500 rounded-full blur-3xl opacity-40 absolute"
         style={{
           left: smoothPos.x - 80,
           top: smoothPos.y - 80,
