@@ -1,9 +1,13 @@
 // Navbar 1
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react"; 
+
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
+   const [menuOpen, setMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,16 +60,50 @@ export default function Navbar() {
                 </motion.a>
               ))}
             </div>
-
             {/* Button */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="px-5 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700"
-            >
+              className="px-5 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700">
               Get Started
+              
             </motion.button>
+               {/* Mobile Hamburger */}
+            <div className="md:hidden">
+              <button onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Dropdown */}
+          <AnimatePresence>
+            {menuOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="md:hidden bg-white/90 backdrop-blur-md shadow-inner"
+              >
+                <div className="flex flex-col items-center py-4 space-y-4">
+                  {["Features", "Templates", "Pricing", "FAQ"].map((item, i) => (
+                    <a
+                      key={i}
+                      href={`#${item.toLowerCase()}`}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-gray-700 font-medium hover:text-purple-600"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                  <button className="px-5 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700">
+                    Get Started
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.nav>
       )}
     </AnimatePresence>
