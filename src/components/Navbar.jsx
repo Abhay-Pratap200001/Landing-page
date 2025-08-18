@@ -30,14 +30,13 @@ export default function Navbar() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -80, opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="fixed top-0 w-full bg-white/40 backdrop-blur-md shadow-sm z-50"
-        >
+          className="fixed top-0 w-full bg-white/40 backdrop-blur-md shadow-sm z-50">
+            
           <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
             {/* Logo */}
             <motion.h1
               whileHover={{ scale: 1.1 }}
-              className="text-xl font-bold cursor-pointer text-purple-700"
-            >
+              className="text-xl font-bold cursor-pointer text-purple-700">
               CopyUI
             </motion.h1>
 
@@ -48,18 +47,19 @@ export default function Navbar() {
                   key={i}
                   href={`#${item.toLowerCase()}`}
                   className="relative font-medium text-gray-700 hover:text-purple-600"
-                  whileHover={{ scale: 1.05 }}
-                >
+                  whileHover={{ scale: 1.05 }}>
                   {item}
+
                   {/* underline animation */}
                   <motion.span
                     className="absolute left-0 bottom-0 h-[2px] w-0 bg-purple-600"
                     whileHover={{ width: "100%" }}
-                    transition={{ duration: 0.3 }}
-                  />
+                    transition={{ duration: 0.3 }}/>
                 </motion.a>
               ))}
             </div>
+
+
             {/* Button */}
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -84,16 +84,15 @@ export default function Navbar() {
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="md:hidden bg-white/90 backdrop-blur-md shadow-inner"
-              >
+                className="md:hidden bg-white/90 backdrop-blur-md shadow-inner">
+                  
                 <div className="flex flex-col items-center py-4 space-y-4">
                   {["Features", "Templates", "Pricing", "FAQ"].map((item, i) => (
                     <a
                       key={i}
                       href={`#${item.toLowerCase()}`}
                       onClick={() => setMenuOpen(false)}
-                      className="text-gray-700 font-medium hover:text-purple-600"
-                    >
+                      className="text-gray-700 font-medium hover:text-purple-600">
                       {item}
                     </a>
                   ))}

@@ -18,9 +18,9 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 text-gray-500">
-            <a href="#" className="hover:text-gray-800 transition"><Github size={20} /></a>
+            <a href="https://github.com/Abhay-Pratap200001" className="hover:text-gray-800 transition"><Github size={20} /></a>
             <a href="#" className="hover:text-blue-500 transition"><Twitter size={20} /></a>
-            <a href="#" className="hover:text-blue-700 transition"><Linkedin size={20} /></a>
+            <a href="http://www.linkedin.com/in/" className="hover:text-blue-700 transition"><Linkedin size={20} /></a>
           </div>
         </div>
 

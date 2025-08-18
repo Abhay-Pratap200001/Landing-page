@@ -42,8 +42,7 @@ export default function templates () {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="text-4xl md:text-5xl font-extrabold text-center mb-16"
-      >
+        className="text-4xl md:text-5xl font-extrabold text-center mb-16">
         Objectives of{" "}
         <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
           Our Platform
@@ -59,9 +58,8 @@ export default function templates () {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
-            className="flex items-start gap-4 p-6 rounded-2xl bg-white/80 shadow-lg hover:shadow-xl border border-gray-200 transition"
-          >
-            <CheckCircle className="w-7 h-7 text-purple-500 shrink-0" />
+            className="flex items-start gap-4 p-6 rounded-2xl bg-white/80 shadow-lg hover:shadow-xl border border-gray-200 transition">
+            <CheckCircle className="w-7 h-7 text-purple-500 shrink-0"/>
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{o.title}</h3>
               <p className="text-gray-600">{o.desc}</p>

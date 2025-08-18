@@ -35,8 +35,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white"
-    >
+      className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white">
 
 <div className="max-w-5xl mx-auto text-center mb-16">
   <motion.h2
@@ -44,8 +43,7 @@ export default function FAQ() {
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, ease: "easeOut" }}
     viewport={{ once: true }}
-    className="text-4xl font-extrabold tracking-tight mb-4"
-  >
+    className="text-4xl font-extrabold tracking-tight mb-4">
     Frequently Asked Questions
   </motion.h2>
 
@@ -54,8 +52,8 @@ export default function FAQ() {
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
     viewport={{ once: true }}
-    className="text-gray-600 max-w-2xl mx-auto"
-  >
+    className="text-gray-600 max-w-2xl mx-auto">
+
     Can’t find the answer you’re looking for? Reach out to our support team.
   </motion.p>
 </div>
@@ -73,17 +71,15 @@ export default function FAQ() {
                 color: isOpen ? "#1e40af" : "#374151", // darker blue vs gray-700
               }}
               transition={{ duration: 0.3 }}
-              className="border rounded-xl shadow-sm"
-            >
+              className="border rounded-xl shadow-sm">
+
               <button
                 onClick={() => setOpen(isOpen ? null : i)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left font-medium focus:outline-none"
-              >
+                className="w-full flex justify-between items-center px-6 py-4 text-left font-medium focus:outline-none">
                 <span>{f.q}</span>
                 <motion.span
                   animate={{ rotate: isOpen ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
-                >
+                  transition={{ duration: 0.3 }}>
                   <ChevronDown size={20} />
                 </motion.span>
               </button>
@@ -95,8 +91,7 @@ export default function FAQ() {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.35 }}
-                    className="overflow-hidden"
-                  >
+                    className="overflow-hidden">
                     <p className="px-6 pb-4 text-gray-700">{f.a}</p>
                   </motion.div>
                 )}

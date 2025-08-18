@@ -36,8 +36,7 @@ export default function CursorGlow() {
         style={{
           left: smoothPos.x - 4,
           top: smoothPos.y - 4,
-        }}
-      />
+        }}/>
 
       {/* Blurry Glow */}
       <div
@@ -45,8 +44,7 @@ export default function CursorGlow() {
         style={{
           left: smoothPos.x - 80,
           top: smoothPos.y - 80,
-        }}
-      />
+        }}/>
     </div>
   );
 }

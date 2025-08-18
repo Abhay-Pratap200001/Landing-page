@@ -49,15 +49,14 @@ export default function Features() {
     <section 
       id="features" 
       className="relative py-50 px-6 max-w-7xl mx-auto overflow-hidden"
-      onMouseMove={(e) => setCursorPos({ x: e.clientX, y: e.clientY })}
-    >
+      onMouseMove={(e) => setCursorPos({ x: e.clientX, y: e.clientY })}>
+
       {/* Cursor-follow glow */}
       <div
         className="pointer-events-none absolute inset-0 z-0 transition duration-300"
         style={{
           background: `radial-gradient(600px circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(168,85,247,0.15), transparent 80%)`
-        }}
-      />
+        }}/>
 
       {/* Content */}
       <motion.h2
@@ -65,8 +64,7 @@ export default function Features() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent relative z-10"
-      >
+        className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent relative z-10">
         Powerful Features to Supercharge Your Workflow
       </motion.h2>
 
@@ -79,8 +77,8 @@ export default function Features() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.15, duration: 0.6 }}
             whileHover={{ scale: 1.05, rotate: 1 }}
-            className="p-8 rounded-2xl shadow-lg hover:shadow-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 relative overflow-hidden group"
-          >
+            
+            className="p-8 rounded-2xl shadow-lg hover:shadow-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 relative overflow-hidden group">
             <div className="relative z-10 flex flex-col items-center text-center">
               <div className="mb-4">{f.icon}</div>
               <h3 className="font-semibold text-2xl mb-3 text-gray-800">{f.title}</h3>

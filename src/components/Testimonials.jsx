@@ -36,17 +36,16 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, letterSpacing: "0em" }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-4xl font-extrabold tracking-tight mb-4"
-        >
+          className="text-4xl font-extrabold tracking-tight mb-4">
           What Developers Say
         </motion.h2>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-gray-600"
-        >
+          className="text-gray-600">
           Trusted by developers worldwide to speed up their workflow.
         </motion.p>
       </div>
@@ -57,41 +56,39 @@ export default function Testimonials() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid md:grid-cols-3 gap-8"
-      >
+        className="grid md:grid-cols-3 gap-8">
         {reviews.map((r, i) => (
+
           <motion.div
             key={i}
             variants={card}
             whileHover={{
               scale: 1.07,
               boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
-              transition: { duration: 0.3 },
-            }}
-            className="p-8 bg-white rounded-2xl shadow-lg relative overflow-hidden"
-          >
+              transition: { duration: 0.3 },}}
+            className="p-8 bg-white rounded-2xl shadow-lg relative overflow-hidden">
+
             {/* Glow animation */}
             <motion.div
               className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0"
               whileHover={{ opacity: 1 }}
-              transition={{ duration: 0.4 }}
-            />
+              transition={{ duration: 0.4 }}/>
+
             <motion.p
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.5 + i * 0.2, duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-gray-700 italic mb-4 relative z-10"
-            >
+              className="text-gray-700 italic mb-4 relative z-10">
               “{r.text}”
             </motion.p>
+
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7 + i * 0.2, duration: 0.6 }}
               viewport={{ once: true }}
-              className="font-semibold text-gray-900 relative z-10"
-            >
+              className="font-semibold text-gray-900 relative z-10">
               — {r.name}
             </motion.p>
           </motion.div>
