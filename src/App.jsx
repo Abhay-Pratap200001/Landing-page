@@ -1,4 +1,3 @@
-// App.jsx
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -14,12 +13,24 @@ import CursorGlow from "./components/CursorGlory";
 
 function App() {
   useEffect(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      duration: 1.6, // longer duration = smoother
+      easing: (t) => 1 - Math.pow(2, -10 * t), // very soft ease-out
+      smoothWheel: true,
+      smoothTouch: true, // enable on mobile too
+      wheelMultiplier: 0.9, // reduce speed so it glides
+      gestureDirection: "vertical", // force vertical smoothness
+    });
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
   }, []);
 
   return (
@@ -33,7 +44,7 @@ function App() {
       <FAQ />
       <Testimonials />
       <Footer />
-      <CursorGlow/>
+      <CursorGlow />
     </div>
   );
 }
