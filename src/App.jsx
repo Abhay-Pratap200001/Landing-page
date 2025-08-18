@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import Home from "./components/LandingPagee/LandingPage/Home";
+import Home from "./components/LandingPage/Home";
 
 function App() {
   useEffect(() => {
@@ -31,7 +31,7 @@ function App() {
   return (
     // App wrapper with Tailwind styling
     <div className="font-sans bg-slate-100 text-gray-900">
-      <Home /> {/* Main landing page component */}
+      <Home/> {/* Main landing page component */}
     </div>
   );
 }
