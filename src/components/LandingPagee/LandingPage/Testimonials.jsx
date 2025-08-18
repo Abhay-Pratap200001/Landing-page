@@ -2,13 +2,16 @@
 import { motion } from "framer-motion";
 
 export default function Testimonials() {
+
+  //data in an array makes it reusable and easy to extend
   const reviews = [
     { name: "Alice", text: "This saved me hours of work!" },
     { name: "Bob", text: "Beautiful components, easy to use." },
     { name: "Charlie", text: "Highly recommend for any dev team." },
   ];
 
-  // Animation variants
+  // Define animation for the containe 
+  // - hidden = initial state (invisible)
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -17,6 +20,7 @@ export default function Testimonials() {
     },
   };
 
+  // Define animation for each card
   const card = {
     hidden: { opacity: 0, y: 50, rotate: 2 },
     show: {
@@ -28,7 +32,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 px-6 max-w-6xl mx-auto text-center">
+    <section className="py-9 px-6 max-w-6xl mx-auto text-center">
       {/* Heading */}
       <div className="max-w-3xl mx-auto mb-16">
         <motion.h2
@@ -40,6 +44,7 @@ export default function Testimonials() {
           What Developers Say
         </motion.h2>
 
+      {/* Subtitle text */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,15 +55,17 @@ export default function Testimonials() {
         </motion.p>
       </div>
 
-      {/* Cards */}
+      {/*Cards Section*/}
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid md:grid-cols-3 gap-8">
-        {reviews.map((r, i) => (
 
+
+        className="grid md:grid-cols-3 gap-8">
+      {/*Loop through each review */}
+        {reviews.map((r, i) => (
           <motion.div
             key={i}
             variants={card}
@@ -68,7 +75,7 @@ export default function Testimonials() {
               transition: { duration: 0.3 },}}
             className="p-8 bg-white rounded-2xl shadow-lg relative overflow-hidden">
 
-            {/* Glow animation */}
+            {/* Hover Glow Effect */}
             <motion.div
               className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0"
               whileHover={{ opacity: 1 }}

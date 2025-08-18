@@ -2,7 +2,9 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
-export default function templates () {
+export default function Templates () {
+
+    // List of objectives with title and description
   const objectives = [
     {
       title: "Launch Core Verticals (Year 1–2)",
@@ -35,8 +37,8 @@ export default function templates () {
   ];
 
   return (
-    <section id="objectives" className="relative  px-6 max-w-7xl mx-auto">
-      {/* Heading */}
+    <section id="objectives" className="relative  px-6 py-30 max-w-7xl mx-auto">
+      {/* Section Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +51,8 @@ export default function templates () {
         </span>
       </motion.h2>
 
-      {/* Grid */}
+
+      {/* Objectives Grid */}
       <div className="grid md:grid-cols-2 gap-8">
         {objectives.map((o, i) => (
           <motion.div
@@ -59,7 +62,11 @@ export default function templates () {
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
             className="flex items-start gap-4 p-6 rounded-2xl bg-white/80 shadow-lg hover:shadow-xl border border-gray-200 transition">
+
+          {/* Icon on the left */}
             <CheckCircle className="w-7 h-7 text-purple-500 shrink-0"/>
+
+           {/* Objective title + description */}
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{o.title}</h3>
               <p className="text-gray-600">{o.desc}</p>

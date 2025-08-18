@@ -1,6 +1,14 @@
-// components/Directory.jsx
+//  components/Directory.jsx
+// ------------------------------------------------------
+// "Meet the Team" Section
+// Displays team members in a responsive grid layout
+// with animations using Framer Motion.
+// ---------------------------------------------------
 import { motion } from "framer-motion";
 
+//  Team members data
+//  Each object contains details of a team member
+//  Easy to extend: just add more objects to the array
 const teamMembers = [
   {
     name: "jaan Devid",
@@ -36,7 +44,9 @@ export default function Directory() {
   return (
     <section
       id="directory"
-      className="py-35 px-6 max-w-7xl mx-auto text-center">
+      className="py-3 px-6 max-w-7xl mx-auto text-center">
+
+      {/* Section Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -45,12 +55,15 @@ export default function Directory() {
         Meet the Team
       </motion.h2>
 
+
+      {/* Section Description */}
       <p className="text-gray-600 max-w-2xl mx-auto mb-12">
         Our passionate and talented team working together to build something
         amazing.
       </p>
 
-      {/* Team grid */}
+
+       {/* Responsive Team Grid */}
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {teamMembers.map((member, index) => (
           <motion.div
@@ -61,6 +74,8 @@ export default function Directory() {
             viewport={{ once: true }}
             className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition">
 
+
+            {/* Member Image */}
             <img
               src={member.image}
               alt={member.name}
@@ -68,8 +83,9 @@ export default function Directory() {
 
             <h3 className="text-lg font-semibold">{member.name}</h3>
             <p className="text-sm text-gray-500">{member.role}</p>
-            <div className="flex justify-center space-x-4 mt-4">
 
+            {/* Social Links */}
+            <div className="flex justify-center space-x-4 mt-4">
               <a
                 href={member.linkedin}
                 target="_blank"

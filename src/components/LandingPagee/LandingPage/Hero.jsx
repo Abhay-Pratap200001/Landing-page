@@ -5,7 +5,7 @@ import { Star, ArrowRight } from "lucide-react"; // lucide icons
 export default function Hero() {
   return (
     <section className="h-screen py-10 flex flex-col justify-center items-center text-center px-6 pt-20">
-      {/* ⭐ Badge */}
+      {/* starting starsextion*/}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -14,6 +14,7 @@ export default function Hero() {
         <Star className="w-4 h-4 fill-purple-600 text-purple-600" />
         Rated 5 Stars by 800+ Developers
       </motion.div>
+
 
       {/* 🎯 Main Heading */}
       <motion.h1
@@ -24,7 +25,8 @@ export default function Hero() {
         Design Made <span className="text-purple-600">Simple</span>
       </motion.h1>
 
-      {/* ✍️ Subtext */}
+
+      {/* Subtext */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -33,7 +35,8 @@ export default function Hero() {
         Everything you need to grow your design workflow. Components, templates, and tools — all in one place.
       </motion.p>
 
-      {/* 🚀 CTA Buttons */}
+
+      {/* Get Started and view Buttons */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -47,7 +50,7 @@ export default function Hero() {
         </button>
       </motion.div>
 
-{/* 🖼️ Hero Image / Mockup */}
+{/* UI Preview Hero Image / Mockup */}
 <motion.div
   initial={{ opacity: 0, y: 40, scale: 0.77 }}
   animate={{ opacity: 1, y: 0, scale: 1 }}

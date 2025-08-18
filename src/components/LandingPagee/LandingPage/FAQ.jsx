@@ -1,8 +1,10 @@
+// Import necessary hooks and libraries
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 export default function FAQ() {
+  // Array of FAQ objects: each has a question (q) and an answer (a)
   const faqs = [
     {
       q: "How do I use these components?",
@@ -30,13 +32,15 @@ export default function FAQ() {
     }
   ];
 
+  // State to track which FAQ item is currently open null none open
   const [open, setOpen] = useState(null);
 
   return (
     <section
       id="faq"
-      className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white">
+      className="py-30 px-6 bg-gradient-to-b from-gray-50">
 
+     {/* Section header */}
 <div className="max-w-5xl mx-auto text-center mb-16">
   <motion.h2
     initial={{ opacity: 0, y: 30 }}
@@ -47,6 +51,7 @@ export default function FAQ() {
     Frequently Asked Questions
   </motion.h2>
 
+  {/* Animated subtitle */}
   <motion.p
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -58,6 +63,7 @@ export default function FAQ() {
   </motion.p>
 </div>
 
+  {/* FAQ grid layout */}
       <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
         {faqs.map((f, i) => {
           const isOpen = open === i;
@@ -73,6 +79,7 @@ export default function FAQ() {
               transition={{ duration: 0.3 }}
               className="border rounded-xl shadow-sm">
 
+         {/* Button that toggles the FAQ open/close */}
               <button
                 onClick={() => setOpen(isOpen ? null : i)}
                 className="w-full flex justify-between items-center px-6 py-4 text-left font-medium focus:outline-none">
@@ -83,7 +90,8 @@ export default function FAQ() {
                   <ChevronDown size={20} />
                 </motion.span>
               </button>
-
+              
+              {/* AnimatePresence allows smooth removal when closing */}
               <AnimatePresence>
                 {isOpen && (
                   <motion.div

@@ -1,50 +1,37 @@
 import { useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Templates from "./components/Templates";
-import Directory from "./components/Directory";
-import Pricing from "./components/Pricing";
-import FAQ from "./components/FAQ";
-import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
 import Lenis from "@studio-freight/lenis";
-import CursorGlow from "./components/CursorGlory";
+import Home from "./components/LandingPagee/LandingPage/Home";
 
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.6, // longer duration = smoother
-      easing: (t) => 1 - Math.pow(2, -10 * t), // very soft ease-out
-      smoothWheel: true,
+      duration: 1.6, //  how long each scroll takes higher = smoother
+      easing: (t) => 1 - Math.pow(2, -10 * t), //very soft ease-out
+      smoothWheel: true,   // enable smooth scroll on mouse wheel
       smoothTouch: true, // enable on mobile too
-      wheelMultiplier: 0.9, // reduce speed so it glides
+      wheelMultiplier: 0.9, // adjust scroll speed lower = slower glide
       gestureDirection: "vertical", // force vertical smoothness
     });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+   let frame;
+  // requestAnimationFrame loop to update Lenis each frame
+    const raf = (time) => {
+      lenis.raf(time); // update scroll state
+      frame = requestAnimationFrame(raf); // keep looping
+    };
+    frame = requestAnimationFrame(raf);
 
+    // Cleanup: cancel RAF + destroy Lenis instance when component unmounts
     return () => {
+      cancelAnimationFrame(frame);
       lenis.destroy();
     };
   }, []);
 
   return (
+    // App wrapper with Tailwind styling
     <div className="font-sans bg-slate-100 text-gray-900">
-      <Navbar />
-      <Hero />
-      <Features />
-      <Templates />
-      <Directory />
-      <Pricing />
-      <FAQ />
-      <Testimonials />
-      <Footer />
-      <CursorGlow />
+      <Home /> {/* Main landing page component */}
     </div>
   );
 }

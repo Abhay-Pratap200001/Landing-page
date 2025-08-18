@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 
 export default function Pricing() {
+
+  // Pricing plans data
   const plans = [
     {
       name: "Starter",
@@ -17,7 +19,7 @@ export default function Pricing() {
         "Unlimited Components",
         "Priority Support",
       ],
-      highlight: true, // middle plan highlighted
+      highlight: true,       //highlight this plan (middle one)
     },
     {
       name: "Enterprise",
@@ -30,7 +32,8 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="py- px-6 max-w-7xl mx-auto text-center">
+      className="py-10 px-6 max-w-7xl mx-auto text-center">
+
       <motion.h2
      initial={{ opacity: 0, y: 30 }}
      whileInView={{ opacity: 1, y: 0 }}
@@ -62,11 +65,13 @@ export default function Pricing() {
 
             <h3 className="font-semibold text-xl mb-2">{p.name}</h3>
 
+
             <p
               className={`text-3xl font-bold mb-6 ${
                 p.highlight ? "text-white" : "text-gray-900"}`}>
               {p.price}
             </p>
+
 
             <ul className="space-y-3 text-sm">
               {p.features.map((f, idx) => (
@@ -79,14 +84,14 @@ export default function Pricing() {
               ))}
             </ul>
 
+
             <button
               className={`mt-8 px-6 py-3 rounded-lg font-medium transition ${
                 p.highlight
                   ? "bg-white text-gray-900 hover:bg-gray-200"
                   : "bg-gray-900 text-white hover:bg-gray-700"}`}>
               Get Started
-            </button>
-            
+            </button>           
           </motion.div>
         ))}
       </div>

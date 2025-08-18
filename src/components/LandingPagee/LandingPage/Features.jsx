@@ -10,8 +10,10 @@ import {
 } from "lucide-react";
 
 export default function Features() {
+    // Track mouse position to create a glowing effect that follows the cursor
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
+  // Array of feature items: each item has a title, description, and an icon
   const items = [
     { 
       title: "Reusable Components", 
@@ -48,26 +50,28 @@ export default function Features() {
   return (
     <section 
       id="features" 
-      className="relative py-50 px-6 max-w-7xl mx-auto overflow-hidden"
+      className="relative py-30 px-6 max-w-7xl mx-auto overflow-hidden"
       onMouseMove={(e) => setCursorPos({ x: e.clientX, y: e.clientY })}>
 
-      {/* Cursor-follow glow */}
+      {/* Background glow that follows the cursor */}
       <div
         className="pointer-events-none absolute inset-0 z-0 transition duration-300"
         style={{
           background: `radial-gradient(600px circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(168,85,247,0.15), transparent 80%)`
         }}/>
 
-      {/* Content */}
+      {/* Section Heading */}
       <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        initial={{ opacity: 0, y: 30 }}        // Start hidden and slightly moved down
+        whileInView={{ opacity: 1, y: 0 }}     // Animate into view when scrolled
+        viewport={{ once: true }}              // Animate only once
+        transition={{ duration: 0.6 }}         // Smooth timing
         className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent relative z-10">
         Powerful Features to Supercharge Your Workflow
       </motion.h2>
 
+
+      {/* Grid layout for feature cards */}
       <div className="relative z-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {items.map((f, i) => (
           <motion.div

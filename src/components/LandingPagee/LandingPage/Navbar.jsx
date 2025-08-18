@@ -5,16 +5,19 @@ import { Menu, X } from "lucide-react";
 
 
 export default function Navbar() {
+  // Tracks if the navbar should be visible (appears after scrolling down a little)
   const [isVisible, setIsVisible] = useState(false);
+
+  // Tracks if the mobile menu (hamburger dropdown) is open
    const [menuOpen, setMenuOpen] = useState(false);
   
-
+  // Handle navbar visibility on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) { // show after scrolling 100px
+      if (window.scrollY > 10) { // show after scrolling 10px
         setIsVisible(true);
       } else {
-        setIsVisible(false);
+        setIsVisible(false);    // hide navbar
       }
     };
 
@@ -24,6 +27,7 @@ export default function Navbar() {
 
   return (
     <AnimatePresence>
+      {/* Render navbar only if it’s visible */}
       {isVisible && (
         <motion.nav
           initial={{ y: -80, opacity: 0 }}
@@ -40,7 +44,9 @@ export default function Navbar() {
               CopyUI
             </motion.h1>
 
-            {/* Nav Links */}
+
+            {/* Desktop Nav Links
+            Hidden on mobile (md breakpoint) */}
             <div className="space-x-6 hidden md:flex">
               {["Features", "Templates", "Pricing", "FAQ"].map((item, i) => (
                 <motion.a
@@ -50,7 +56,8 @@ export default function Navbar() {
                   whileHover={{ scale: 1.05 }}>
                   {item}
 
-                  {/* underline animation */}
+
+                  {/* underline animation effect  */}
                   <motion.span
                     className="absolute left-0 bottom-0 h-[2px] w-0 bg-purple-600"
                     whileHover={{ width: "100%" }}
@@ -60,7 +67,7 @@ export default function Navbar() {
             </div>
 
 
-            {/* Button */}
+            {/* Primary Action Button */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -68,7 +75,7 @@ export default function Navbar() {
               Get Started
               
             </motion.button>
-               {/* Mobile Hamburger */}
+             {/* Mobile Hamburger Only visible on small screens*/}
             <div className="md:hidden">
               <button onClick={() => setMenuOpen(!menuOpen)}>
                 {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -76,7 +83,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Dropdown */}
+          {/* Mobile Dropdown Expands when hamburger is clicked */}
           <AnimatePresence>
             {menuOpen && (
               <motion.div
@@ -96,6 +103,8 @@ export default function Navbar() {
                       {item}
                     </a>
                   ))}
+
+                  {/* CTA inside mobile menu */}
                   <button className="px-5 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700">
                     Get Started
                   </button>
