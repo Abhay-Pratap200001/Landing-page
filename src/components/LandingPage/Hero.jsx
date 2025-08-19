@@ -11,7 +11,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-        <Star className="w-4 h-4 fill-purple-600 text-purple-600" />
+        <Star className="w-4 h-4 fill-purple-500 text-purple-600" />
         Rated 5 Stars by 800+ Developers
       </motion.div>
 
@@ -22,7 +22,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-5xl font-bold mb-4">
-        Design Made <span className="text-purple-600">Simple</span>
+        Design Made <span className="text-purple-500">Simple</span>
       </motion.h1>
 
 
