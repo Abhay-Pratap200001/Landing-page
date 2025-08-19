@@ -3,3 +3,10 @@
 html, body {
   overflow-x: hidden;
 }
+:root {
+  --primary-color: #4F46E5;
+  --secondary-color: #A5B4FC;
+  --accent-color: #10B981;
+  --text-color: #1F2937;
+  --bg-color: #F9FAFB;
+}
