@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Features from "./Features";
 import Pricing from "./Pricing";
@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import CursorGlow from "./CursorGlory";
 import Directory from "./Directory";
 import Templates from "./Templates";
+import Navbar from "./Navbar";
 function Home() {
   //Importing all components in sigle file 
   return (

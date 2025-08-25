@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/LandingPage/Home";
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import CreatProject from "./components/pages/ProjectManagement/CreatProject";
+import P2 from "./Pages/ProjectPage/P2";
 
 function App() {
   useEffect(() => {
@@ -30,25 +31,15 @@ function App() {
     };
   }, []);
 
-  return (
-    // App wrapper with Tailwind styling
-    <div className="font-sans bg-slate-100 text-gray-900">
-     
-     <BrowserRouter>
-     <Routes>
-
-<Route path="/" element={<Home/>}></Route>
-
-
-<Route path="CreatPage" element={<CreatProject/>}></Route>
-
-
-     </Routes>
-     
-     </BrowserRouter>
-     
-     
-   {/* Main landing page component */}
+ return (
+   <div className="font-sans bg-slate-100 text-gray-900">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />   {/* ✅ Fixed */}
+          <Route path="CreatPage" element={<CreatProject/>}>
+          <Route path="/p2" element={<P2 />} /> 
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
