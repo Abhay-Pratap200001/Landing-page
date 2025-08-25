@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/LandingPage/Home";
-import P2 from "./Pages/ProjectPage/P2";
-import P1 from "./Pages/ProjectPage/p1";
+import P2 from "./Pages/ProjectPage/PageSecond";
+import P1 from "./Pages/ProjectPage/Pagefirst";
 
 function App() {
   useEffect(() => {
