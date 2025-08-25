@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/LandingPage/Home";
+import P2 from "./Pages/ProjectPage/P2";
+import Navbar from "./components/LandingPage/Navbar";
 
 function App() {
   useEffect(() => {
@@ -28,10 +31,14 @@ function App() {
     };
   }, []);
 
-  return (
-    // App wrapper with Tailwind styling
-    <div className="font-sans bg-slate-100 text-gray-900">
-      <Home/> {/* Main landing page component */}
+ return (
+   <div className="font-sans bg-slate-100 text-gray-900">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />   {/* ✅ Fixed */}
+          <Route path="/p2" element={<P2 />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

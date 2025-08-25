@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Adoddle",
+    "description": "This is Adoddle project description. It explains what the project is about and key details.",
+    "date": "05 APRIL 2023",
+    "issues": 14,
+    "status": "Offtrack",
+    "members": [
+      { "name": "John Doe", "image": "https://randomuser.me/api/portraits/men/32.jpg" },
+      { "name": "Jane Smith", "image": "https://randomuser.me/api/portraits/women/45.jpg" },
+      { "name": "Alex Lee", "image": "https://randomuser.me/api/portraits/men/67.jpg" }
+    ]
+  },
+  {
+    "title": "Buildify",
+    "description": "Buildify is focused on construction workflows with modern cloud collaboration.",
+    "date": "12 MAY 2023",
+    "issues": 8,
+    "status": "Ontrack",
+    "members": [
+      { "name": "Sarah Khan", "image": "https://randomuser.me/api/portraits/women/55.jpg" },
+      { "name": "David Brown", "image": "https://randomuser.me/api/portraits/men/47.jpg" },
+      { "name": "Emily Clark", "image": "https://randomuser.me/api/portraits/women/61.jpg" }
+    ]
+  },
+  {
+    "title": "TaskHub",
+    "description": "TaskHub helps in project management and bug tracking for agile teams.",
+    "date": "22 JUNE 2023",
+    "issues": 20,
+    "status": "Delayed",
+    "members": [
+      { "name": "Michael Scott", "image": "https://randomuser.me/api/portraits/men/70.jpg" },
+      { "name": "Pam Beesly", "image": "https://randomuser.me/api/portraits/women/22.jpg" },
+      { "name": "Jim Halpert", "image": "https://randomuser.me/api/portraits/men/12.jpg" }
+    ]
+  },
+ {
+    "title": "Adoddle",
+    "description": "This is Adoddle project description. It explains what the project is about and key details.",
+    "date": "05 APRIL 2023",
+    "issues": 14,
+    "status": "Offtrack",
+    "members": [
+      { "name": "John Doe", "image": "https://randomuser.me/api/portraits/men/32.jpg" },
+      { "name": "Jane Smith", "image": "https://randomuser.me/api/portraits/women/45.jpg" },
+      { "name": "Alex Lee", "image": "https://randomuser.me/api/portraits/men/67.jpg" }
+    ]
+  },
+  {
+    "title": "Buildify",
+    "description": "Buildify is focused on construction workflows with modern cloud collaboration.",
+    "date": "12 MAY 2023",
+    "issues": 8,
+    "status": "Ontrack",
+    "members": [
+      { "name": "Sarah Khan", "image": "https://randomuser.me/api/portraits/women/55.jpg" },
+      { "name": "David Brown", "image": "https://randomuser.me/api/portraits/men/47.jpg" },
+      { "name": "Emily Clark", "image": "https://randomuser.me/api/portraits/women/61.jpg" }
+    ]
+  },
+  {
+    "title": "TaskHub",
+    "description": "TaskHub helps in project management and bug tracking for agile teams.",
+    "date": "22 JUNE 2023",
+    "issues": 20,
+    "status": "Delayed",
+    "members": [
+      { "name": "Michael Scott", "image": "https://randomuser.me/api/portraits/men/70.jpg" },
+      { "name": "Pam Beesly", "image": "https://randomuser.me/api/portraits/women/22.jpg" },
+      { "name": "Jim Halpert", "image": "https://randomuser.me/api/portraits/men/12.jpg" }
+    ]
+  },
+   {
+    "title": "Adoddle",
+    "description": "This is Adoddle project description. It explains what the project is about and key details.",
+    "date": "05 APRIL 2023",
+    "issues": 14,
+    "status": "Offtrack",
+    "members": [
+      { "name": "John Doe", "image": "https://randomuser.me/api/portraits/men/32.jpg" },
+      { "name": "Jane Smith", "image": "https://randomuser.me/api/portraits/women/45.jpg" },
+      { "name": "Alex Lee", "image": "https://randomuser.me/api/portraits/men/67.jpg" }
+    ]
+  }
+]
