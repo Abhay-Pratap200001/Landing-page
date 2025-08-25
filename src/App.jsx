@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/LandingPage/Home";
 import P2 from "./Pages/ProjectPage/PageSecond";
 import P1 from "./Pages/ProjectPage/Pagefirst";
+import Pagefirst from "./Pages/ProjectPage/Pagefirst";
+import PageSecond from "./Pages/ProjectPage/PageSecond";
 
 function App() {
   useEffect(() => {
@@ -36,8 +38,8 @@ function App() {
        <BrowserRouter>
         <Routes>
          <Route path="/" element={<Home />} />   {/* ✅ Fixed */}
-          <Route path="/create" element={<P1/>} />
-          <Route path="/p2" element={<P2 />} />
+          <Route path="/create" element={<Pagefirst/>} />
+          <Route path="/p2" element={<PageSecond />} />
         </Routes>
       </BrowserRouter>
     </div>

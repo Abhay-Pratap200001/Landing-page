@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaEdit, FaExclamationTriangle, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import projectsData from "../../data/projectDtata.json";
 
-export default function P2() {
+export default function PageSecond() {
   const [currentPage, setCurrentPage] = useState(1);
   const [menuOpen, setMenuOpen] = useState(false);
 

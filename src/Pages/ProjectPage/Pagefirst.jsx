@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // ✅ import
 
-const P1 = () => {
+const Pagefirst = () => {
   const roles = [
     "Team Lead",
     "Frontend",
@@ -110,4 +110,4 @@ const P1 = () => {
   );
 };
 
-export default P1;
+export default Pagefirst 
