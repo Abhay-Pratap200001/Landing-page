@@ -58,7 +58,7 @@ const roles = [ `Team Lead`, `Frontend`, `Backend`,`Testing`, `Documentation`];
       </div>
       </div>
 </div>  
-
+{/* This is the new section */}
       </>
   )
 }
