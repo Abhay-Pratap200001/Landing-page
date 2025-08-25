@@ -7,7 +7,7 @@ export default function P2() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="bg-[#f5f9ff] min-h-screen flex flex-col">
+    <div className="bg-[#f5f9ff] min-h-screen flex flex-col mt-10">
       {/* NAVBAR */}
       <nav className="top-0 w-full flex flex-wrap md:flex-nowrap justify-between items-center  bg-white px-4 md:px-6 py-3 shadow gap-4 fixed z-40 ">
         
@@ -57,9 +57,6 @@ export default function P2() {
         {/* Header section */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-3">
           <h1 className="text-xl font-bold text-gray-800">Projects</h1>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg shadow w-full sm:w-auto">
-            Create
-          </button>
         </div>
 
         {/* Projects Grid */}

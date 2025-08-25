@@ -3,6 +3,7 @@ import Lenis from "@studio-freight/lenis";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/LandingPage/Home";
 import P2 from "./Pages/ProjectPage/P2";
+import P1 from "./Pages/ProjectPage/p1";
 
 function App() {
   useEffect(() => {
@@ -35,7 +36,7 @@ function App() {
        <BrowserRouter>
         <Routes>
          <Route path="/" element={<Home />} />   {/* ✅ Fixed */}
-          <Route path="/create" element={<CreateProject />} />
+          <Route path="/create" element={<P1/>} />
           <Route path="/p2" element={<P2 />} />
         </Routes>
       </BrowserRouter>
