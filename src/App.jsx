@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/LandingPage/Home";
-import CreatProject from "./components/pages/ProjectManagement/CreatProject";
 import P2 from "./Pages/ProjectPage/P2";
 
 function App() {
@@ -31,18 +30,17 @@ function App() {
     };
   }, []);
 
- return (
-   <div className="font-sans bg-slate-100 text-gray-900">
-      <BrowserRouter>
+  return (
+    <div className="font-sans bg-slate-100 text-gray-900">
+       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />   {/* ✅ Fixed */}
-          <Route path="CreatPage" element={<CreatProject/>}>
-          <Route path="/p2" element={<P2 />} /> 
+         <Route path="/" element={<Home />} />   {/* ✅ Fixed */}
+          <Route path="/create" element={<CreateProject />} />
+          <Route path="/p2" element={<P2 />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
 
 export default App;
